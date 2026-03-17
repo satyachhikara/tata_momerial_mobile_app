@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("tata_momerial.web.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1768edad9403052304424a914d47ecad7b1bd457")]
 [assembly: System.Reflection.AssemblyProductAttribute("tata_momerial.web.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("tata_momerial.web.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

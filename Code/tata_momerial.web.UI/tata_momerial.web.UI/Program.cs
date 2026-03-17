@@ -119,7 +119,6 @@ app.UseCors(c =>
 {
     c.AllowAnyHeader().AllowAnyOrigin();
 });
-app.UseMvc();
 
 app.UseRouting();
 

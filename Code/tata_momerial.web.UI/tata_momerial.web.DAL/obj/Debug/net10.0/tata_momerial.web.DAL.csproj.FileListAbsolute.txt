@@ -17,3 +17,4 @@ D:\Chaster_Project_GitHub\tata_momerial_mobile_app\Code\tata_momerial.web.UI\tat
 D:\Chaster_Project_GitHub\tata_momerial_mobile_app\Code\tata_momerial.web.UI\tata_momerial.web.DAL\obj\Debug\net10.0\refint\tata_momerial.web.DAL.dll
 D:\Chaster_Project_GitHub\tata_momerial_mobile_app\Code\tata_momerial.web.UI\tata_momerial.web.DAL\obj\Debug\net10.0\tata_momerial.web.DAL.pdb
 D:\Chaster_Project_GitHub\tata_momerial_mobile_app\Code\tata_momerial.web.UI\tata_momerial.web.DAL\obj\Debug\net10.0\ref\tata_momerial.web.DAL.dll
+D:\Chaster_Project_GitHub\tata_momerial_mobile_app\Code\tata_momerial.web.UI\tata_momerial.web.DAL\obj\Debug\net10.0\tata_momerial.web.DAL.sourcelink.json
