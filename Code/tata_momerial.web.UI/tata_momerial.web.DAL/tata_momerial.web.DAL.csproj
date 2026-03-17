@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+    <PackageReference Include="Npgsql" Version="10.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\tata_momerial.web.BAL\tata_momerial.web.BAL.csproj" />
+    <ProjectReference Include="..\tata_momerial.web.Common\tata_momerial.web.Common.csproj" />
+    <ProjectReference Include="..\tata_momerial.web.DTO\tata_momerial.web.DTO.csproj" />
+  </ItemGroup>
+
+</Project>

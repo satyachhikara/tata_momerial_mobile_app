@@ -1,0 +1,11 @@
+D:\Chaster_Project_GitHub\tata_momerial_mobile_app\Code\tata_momerial.web.UI\tata_momerial.web.DTO\bin\Debug\net10.0\tata_momerial.web.DTO.deps.json
+D:\Chaster_Project_GitHub\tata_momerial_mobile_app\Code\tata_momerial.web.UI\tata_momerial.web.DTO\bin\Debug\net10.0\tata_momerial.web.DTO.dll
+D:\Chaster_Project_GitHub\tata_momerial_mobile_app\Code\tata_momerial.web.UI\tata_momerial.web.DTO\bin\Debug\net10.0\tata_momerial.web.DTO.pdb
+D:\Chaster_Project_GitHub\tata_momerial_mobile_app\Code\tata_momerial.web.UI\tata_momerial.web.DTO\obj\Debug\net10.0\tata_momerial.web.DTO.GeneratedMSBuildEditorConfig.editorconfig
+D:\Chaster_Project_GitHub\tata_momerial_mobile_app\Code\tata_momerial.web.UI\tata_momerial.web.DTO\obj\Debug\net10.0\tata_momerial.web.DTO.AssemblyInfoInputs.cache
+D:\Chaster_Project_GitHub\tata_momerial_mobile_app\Code\tata_momerial.web.UI\tata_momerial.web.DTO\obj\Debug\net10.0\tata_momerial.web.DTO.AssemblyInfo.cs
+D:\Chaster_Project_GitHub\tata_momerial_mobile_app\Code\tata_momerial.web.UI\tata_momerial.web.DTO\obj\Debug\net10.0\tata_momerial.web.DTO.csproj.CoreCompileInputs.cache
+D:\Chaster_Project_GitHub\tata_momerial_mobile_app\Code\tata_momerial.web.UI\tata_momerial.web.DTO\obj\Debug\net10.0\tata_momerial.web.DTO.dll
+D:\Chaster_Project_GitHub\tata_momerial_mobile_app\Code\tata_momerial.web.UI\tata_momerial.web.DTO\obj\Debug\net10.0\refint\tata_momerial.web.DTO.dll
+D:\Chaster_Project_GitHub\tata_momerial_mobile_app\Code\tata_momerial.web.UI\tata_momerial.web.DTO\obj\Debug\net10.0\tata_momerial.web.DTO.pdb
+D:\Chaster_Project_GitHub\tata_momerial_mobile_app\Code\tata_momerial.web.UI\tata_momerial.web.DTO\obj\Debug\net10.0\ref\tata_momerial.web.DTO.dll

@@ -1,0 +1,6 @@
+@tata_momerial.web.API_HostAddress = http://localhost:5162
+
+GET {{tata_momerial.web.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
