@@ -8,7 +8,7 @@
 //=============================================
 using System;
 using System.Data;
-using Npgsql;
+using Microsoft.Data.SqlClient;
 
 namespace tata_momerial.web.DAL
 {
@@ -24,7 +24,7 @@ namespace tata_momerial.web.DAL
         public static IDbConnection GetConnection()
         {
             IDbConnection iDbConnection = null;
-            iDbConnection = new Npgsql.NpgsqlConnection();
+            iDbConnection = new SqlConnection();
             return iDbConnection;
         }        
     }

@@ -16,12 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
-    <PackageReference Include="Npgsql" Version="10.0.2" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\tata_momerial.web.BAL\tata_momerial.web.bal.csproj" />
     <ProjectReference Include="..\tata_momerial.web.Common\tata_momerial.web.common.csproj" />
     <ProjectReference Include="..\tata_momerial.web.DTO\tata_momerial.web.dto.csproj" />
   </ItemGroup>

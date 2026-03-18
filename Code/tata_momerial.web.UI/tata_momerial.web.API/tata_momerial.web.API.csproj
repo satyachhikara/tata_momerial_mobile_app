@@ -10,4 +10,10 @@
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.13" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\tata_momerial.web.BAL\tata_momerial.web.bal.csproj" />
+    <ProjectReference Include="..\tata_momerial.web.Common\tata_momerial.web.common.csproj" />
+    <ProjectReference Include="..\tata_momerial.web.DTO\tata_momerial.web.dto.csproj" />
+  </ItemGroup>
+
 </Project>
