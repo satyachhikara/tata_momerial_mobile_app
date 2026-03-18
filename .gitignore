@@ -3,3 +3,9 @@
 ################################################################################
 
 /Code/tata_momerial.web.UI/.vs/tata_momerial.web.UI
+/Code/tata_momerial.web.UI/tata_momerial.web.API/bin/Debug/net10.0
+/Code/tata_momerial.web.UI/tata_momerial.web.BAL/bin/Debug/net10.0
+/Code/tata_momerial.web.UI/tata_momerial.web.Common/bin/Debug/net10.0
+/Code/tata_momerial.web.UI/tata_momerial.web.DAL/bin/Debug/net10.0
+/Code/tata_momerial.web.UI/tata_momerial.web.DTO/bin/Debug/net10.0
+/Code/tata_momerial.web.UI/tata_momerial.web.UI/bin/Debug/net10.0
