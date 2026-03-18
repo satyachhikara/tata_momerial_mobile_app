@@ -16,9 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\tata_momerial.web.Common\tata_momerial.web.common.csproj" />
-    <ProjectReference Include="..\tata_momerial.web.DAL\tata_momerial.web.dal.csproj" />
-    <ProjectReference Include="..\tata_momerial.web.DTO\tata_momerial.web.dto.csproj" />
+    <ProjectReference Include="..\tata_momerial.web.common\tata_momerial.web.common.csproj" />
+    <ProjectReference Include="..\tata_momerial.web.dal\tata_momerial.web.dal.csproj" />
+    <ProjectReference Include="..\tata_momerial.web.dto\tata_momerial.web.dto.csproj" />
   </ItemGroup>
 
 </Project>

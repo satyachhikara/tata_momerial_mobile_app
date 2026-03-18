@@ -1,10 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
-VisualStudioVersion = 18.3.11527.330 d18.3
+VisualStudioVersion = 18.3.11527.330
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tata_momerial.web.ui", "tata_momerial.web.UI\tata_momerial.web.ui.csproj", "{8D7BC1A6-5998-45B5-9803-84F319A25127}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tata_momerial.web.dal", "tata_momerial.web.DAL\tata_momerial.web.dal.csproj", "{F1E96D7C-8B55-4B13-8EEC-00F75572979F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tata_momerial.web.bal", "tata_momerial.web.BAL\tata_momerial.web.bal.csproj", "{57BF3A59-8F8A-45BF-8F93-7E8B80BBC72E}"
@@ -21,10 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8D7BC1A6-5998-45B5-9803-84F319A25127}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8D7BC1A6-5998-45B5-9803-84F319A25127}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8D7BC1A6-5998-45B5-9803-84F319A25127}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8D7BC1A6-5998-45B5-9803-84F319A25127}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F1E96D7C-8B55-4B13-8EEC-00F75572979F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F1E96D7C-8B55-4B13-8EEC-00F75572979F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1E96D7C-8B55-4B13-8EEC-00F75572979F}.Release|Any CPU.ActiveCfg = Release|Any CPU
