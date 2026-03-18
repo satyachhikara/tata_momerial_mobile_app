@@ -99,6 +99,6 @@ namespace tata_momerial.web.common
     public class MailAttachments
     {
         public string FileName { get; set; } = string.Empty;
-        public byte[] ByteAttachment { get; set; } = Array.Empty<byte>();
+        public byte[]? ByteAttachment { get; set; } 
     }
 }
