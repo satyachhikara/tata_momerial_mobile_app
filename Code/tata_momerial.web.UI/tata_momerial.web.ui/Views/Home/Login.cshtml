@@ -1,0 +1,306 @@
+﻿@using tata_momerial.web.dto
+@model loginDTO
+@using tata_momerial.web.common
+@{
+    ViewData["Title"] = "Login";
+    Layout = null;
+
+    ApplicationConfiguration ApplicationConfiguration = AppServicesHelper.ApplicationConfiguration;
+    string webSiteURL = tata_momerial.web.common.AppServicesHelper.WebsiteURL;
+}
+<script type="text/javascript">
+    function EncryptPassword(saltValue) {
+        var plainText = $("#password").val();
+        if (plainText != '') {
+            var saltKey = saltValue;
+            var encryptedText = SHA512(plainText).toLowerCase();
+            var encryptedTextNew = SHA512(encryptedText + saltKey);
+            $("#password").val(encryptedTextNew);
+            return true;
+        }
+        return true;
+    }
+    function RefreshCaptchaImage() {
+        location.reload();
+    }
+</script>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - National Statistics Office (NSO)</title>
+    <script src="https://www.google.com/recaptcha/api.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="@webSiteURL/css/sweetalert2.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="@webSiteURL/js/sweetalert2.all.min.js"></script>
+    <script src="@webSiteURL/js/sha512script.js"></script>
+    <script src="@webSiteURL/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="@webSiteURL/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="form-section">
+            <h2>Login(लॉगिन)</h2>
+            <form asp-area="" asp-controller="Home" asp-action="Login">
+                @Html.AntiForgeryToken()
+                <div class="row">
+                    <input type="text" asp-for="emailaddress" placeholder="Email Address(ईमेल पता)" />
+                    <span asp-validation-for="emailaddress" class="text-danger"></span>
+                </div>
+                <div class="row password-wrapper">
+                    <input type="password"
+                           asp-for="password"
+                           id="password"
+                           placeholder="Password (पासवर्ड)" />
+
+                    <i class="bi bi-eye toggle-password"
+                       id="toggleIcon"
+                       onclick="togglePassword()"></i>
+
+                    <span asp-validation-for="password" class="text-danger"></span>
+                </div>
+
+                @if (ApplicationConfiguration.ischeckcaptcha)
+                {
+                    <div class="col-12 col-md-12 col-lg-12">
+                        <div class="form-group">
+                            <input type="text" asp-for="captchaCode" maxlength="6" autocomplete="off" class="form-control" placeholder="Captcha Code(सुरक्षा कोड (कैप्चा))" />
+                            <span asp-validation-for="captchaCode" class="text-danger"></span>
+                            <div class="icon-group">
+                                <i class="fa fa-key"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-12">
+                        <div class="form-group refresh-icon">
+                            <img id="imgCaptchaImage" src="@Html.Raw(Url.Action("GetCaptchaImageLogin", "Image", new { Area = "", s = @tata_momerial.web.ui.Business.CommonClass.GetRandomText() }))" alt="Captcha">
+                            <a href="#" onclick="RefreshCaptchaImage()"><img src="@AppServicesHelper.WebsiteURL/images/refresh.png" alt="Refresh Captcha"></a>
+                        </div>
+                    </div>
+                }
+                <div class="form-actions">
+                    <a asp-action="ForgotPassword" asp-controller="Home" asp-area="">Forgot Password(पासवर्ड भूल गए हैं?)</a>
+                </div>
+                <button type="submit" class="login-btn" onclick="return EncryptPassword('@ViewBag.KeyLogin');">Login/लॉगिन करें</button>
+            </form>
+        </div>
+
+        <div class="welcome-section">
+            <h2>NSO</h2>
+            <p>National Statistics Office (NSO)</p>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+        $(document).ready(function () {
+        var Successmessage = false;
+        //var errorMsg = "@Model.errormessage";
+        var errorMsg =  @Html.Raw(Json.Serialize(Model.errormessage));
+        var errorMsg2 = "<div style='text-align: center;'>" + errorMsg.replaceAll('#', '<br/>') + "</div>";
+        var Validationmessage = "@Model.showvalidationmessage";
+        Successmessage = "@Model.showsuccessmessage";
+        if (Validationmessage === 'True') {
+            Swal.fire({ title: "Failure", text: errorMsg2, type: "error", html: errorMsg2 },
+                function () {
+
+                });
+        }
+        else if (Successmessage === 'True') {
+           Swal.fire({ title: "Success", text: errorMsg2, type: "success", html: errorMsg2 },
+                function () {
+
+                });
+        }
+    });
+
+          function togglePassword() {
+        const password = document.getElementById("password");
+        const icon = document.getElementById("toggleIcon");
+
+        if (password.type === "password") {
+            password.type = "text";
+            icon.classList.replace("bi-eye", "bi-eye-slash");
+        } else {
+            password.type = "password";
+            icon.classList.replace("bi-eye-slash", "bi-eye");
+        }
+    }
+</script>
+
+
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: "Segoe UI", sans-serif;
+        background: #f4f4f4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .login-container {
+        display: flex;
+        width: 900px;
+        background: #fff;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .form-section {
+        flex: 1;
+        padding: 40px;
+    }
+
+        .form-section h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .form-section p {
+            margin-bottom: 20px;
+            color: #777;
+        }
+
+        .form-section a {
+            color: #5a00b1;
+            text-decoration: none;
+        }
+
+    form input {
+        width: 100%;
+        padding: 12px 15px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+    }
+
+    .form-actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .login-btn {
+        background: #041854;
+        color: white;
+        padding: 12px;
+        width: 100%;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+        .login-btn:hover {
+            background: #0d3099;
+        }
+
+    .social-login {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .social-btn {
+        border: none;
+        margin: 5px;
+        padding: 10px 15px;
+        border-radius: 4px;
+        cursor: pointer;
+        color: white;
+        font-size: 16px;
+    }
+
+    .fb {
+        background-color: #3b5998;
+    }
+
+    .tw {
+        background-color: #00aced;
+    }
+
+    .welcome-section {
+        flex: 1;
+        background: linear-gradient(135deg, #6e00ff, #00c2ff);
+        color: white;
+        padding: 40px;
+        clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: right;
+    }
+
+        .welcome-section h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .welcome-section p {
+            font-size: 16px;
+            color: #eee;
+        }
+
+    @@media (max-width: 768px) {
+        .login-container {
+            flex-direction: column;
+            width: 90%;
+        }
+
+        .welcome-section {
+            clip-path: none;
+            text-align: center;
+            padding: 20px;
+        }
+    }
+
+    .text-danger {
+        color: red !important;
+        font-size: 14px;
+    }
+
+    .refresh-icon a {
+        position: relative;
+        top: -10px;
+        left: 10px;
+    }
+
+    input,
+    select,
+    textarea {
+        border: 1px solid #000000 !important;
+        border-radius: 4px !important;
+        padding: 6px !important;
+    }
+
+    .password-wrapper {
+        position: relative;
+    }
+
+    .toggle-password {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: #555;
+        font-size: 18px;
+    }
+
+
+</style>

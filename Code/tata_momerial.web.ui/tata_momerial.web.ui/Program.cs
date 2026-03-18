@@ -11,6 +11,7 @@ using System.Globalization;
 IConfiguration Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddScoped<ICookieService, CookieService>();
 
 var cultureinfo = new CultureInfo("en-IN");
 builder.Services.Configure<RequestLocalizationOptions>(options =>

@@ -3,12 +3,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ViewEngines;
 using tata_momerial.web.common.Cookie;
 using tata_momerial.web.ui.Business;
-using IMailService = tata_momerial.web.common.IMailService;
+using tata_momerial.web.common;
 
 
 namespace tata_momerial.web.ui.Controllers
 {
-    public class HomeController : BaseController
+    public partial class HomeController : BaseController
     {
         public HomeController(ICookieService objCookieService, ICompositeViewEngine viewEngine,
          ILogger<BaseController> logger, IHttpContextAccessor httpContextAccessor, IWebHostEnvironment env, IMailService _mailService) : base(objCookieService,
