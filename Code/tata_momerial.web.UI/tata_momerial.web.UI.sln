@@ -1,19 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.37012.4
+# Visual Studio Version 18
+VisualStudioVersion = 18.3.11527.330 d18.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tata_momerial.web.UI", "tata_momerial.web.UI\tata_momerial.web.UI.csproj", "{8D7BC1A6-5998-45B5-9803-84F319A25127}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tata_momerial.web.ui", "tata_momerial.web.UI\tata_momerial.web.ui.csproj", "{8D7BC1A6-5998-45B5-9803-84F319A25127}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tata_momerial.web.DAL", "tata_momerial.web.DAL\tata_momerial.web.DAL.csproj", "{F1E96D7C-8B55-4B13-8EEC-00F75572979F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tata_momerial.web.dal", "tata_momerial.web.DAL\tata_momerial.web.dal.csproj", "{F1E96D7C-8B55-4B13-8EEC-00F75572979F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tata_momerial.web.BAL", "tata_momerial.web.BAL\tata_momerial.web.BAL.csproj", "{57BF3A59-8F8A-45BF-8F93-7E8B80BBC72E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tata_momerial.web.bal", "tata_momerial.web.BAL\tata_momerial.web.bal.csproj", "{57BF3A59-8F8A-45BF-8F93-7E8B80BBC72E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tata_momerial.web.Common", "tata_momerial.web.Common\tata_momerial.web.Common.csproj", "{1536B684-6EFA-432C-8D09-8DB0AB24A714}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tata_momerial.web.common", "tata_momerial.web.Common\tata_momerial.web.common.csproj", "{1536B684-6EFA-432C-8D09-8DB0AB24A714}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tata_momerial.web.DTO", "tata_momerial.web.DTO\tata_momerial.web.DTO.csproj", "{84E6AEB6-5C06-4E36-A67B-9FDD7E3F2412}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tata_momerial.web.dto", "tata_momerial.web.DTO\tata_momerial.web.dto.csproj", "{84E6AEB6-5C06-4E36-A67B-9FDD7E3F2412}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tata_momerial.web.API", "tata_momerial.web.API\tata_momerial.web.API.csproj", "{4CE02691-6C58-4C92-88AD-48A75EA7148D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tata_momerial.web.api", "tata_momerial.web.API\tata_momerial.web.api.csproj", "{4CE02691-6C58-4C92-88AD-48A75EA7148D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
