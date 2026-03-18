@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
 using MimeKit;
 
-namespace tata_momerial.web.Common
+namespace tata_momerial.web.common
 {
     public interface IMailService
     {

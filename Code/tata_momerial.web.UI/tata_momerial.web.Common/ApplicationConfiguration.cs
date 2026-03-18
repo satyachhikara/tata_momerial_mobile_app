@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace tata_momerial.web.Common
+namespace tata_momerial.web.common
 {
     public class ApplicationConfiguration
     {

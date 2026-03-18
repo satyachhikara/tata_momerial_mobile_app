@@ -6,7 +6,7 @@ using Microsoft.Extensions.Options;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace tata_momerial.web.Common
+namespace tata_momerial.web.common
 {
     public static class AppServicesHelper
     {

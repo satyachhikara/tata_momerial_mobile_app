@@ -7,7 +7,7 @@
 //Modified Reason: 
 //=============================================
 using System.Data;
-using tata_momerial.web.Common;
+using tata_momerial.web.common;
 namespace tata_momerial.web.DAL
 {
     internal sealed class DBManager : IDBManager, IDisposable

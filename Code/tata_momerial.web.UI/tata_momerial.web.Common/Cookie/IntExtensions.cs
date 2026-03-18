@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace tata_momerial.web.Common.Cookie
+namespace tata_momerial.web.common.Cookie
 {
     public static class IntExtensions
     {

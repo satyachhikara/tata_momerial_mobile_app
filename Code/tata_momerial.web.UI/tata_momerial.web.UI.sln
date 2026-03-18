@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tata_momerial.web.dto", "ta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tata_momerial.web.api", "tata_momerial.web.API\tata_momerial.web.api.csproj", "{4CE02691-6C58-4C92-88AD-48A75EA7148D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tata_momerial.web.ui", "tata_momerial.web.ui\tata_momerial.web.ui.csproj", "{A413867B-60A2-4EEE-B593-542C276D6700}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{4CE02691-6C58-4C92-88AD-48A75EA7148D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CE02691-6C58-4C92-88AD-48A75EA7148D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CE02691-6C58-4C92-88AD-48A75EA7148D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A413867B-60A2-4EEE-B593-542C276D6700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A413867B-60A2-4EEE-B593-542C276D6700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A413867B-60A2-4EEE-B593-542C276D6700}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A413867B-60A2-4EEE-B593-542C276D6700}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
