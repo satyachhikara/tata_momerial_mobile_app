@@ -20,11 +20,11 @@ namespace tata_momerial.web.common
         public async Task SendEmailAsync(MailRequest mailRequest)
         {
             var email = new MimeMessage();
-            email.Sender = MailboxAddress.Parse(_mailSettings.Mail);
-            if (!string.IsNullOrWhiteSpace(mailRequest.ToEmail))
+            email.Sender = MailboxAddress.Parse(_mailSettings.mail);
+            if (!string.IsNullOrWhiteSpace(mailRequest.toemail))
             {
-                mailRequest.ToEmail = mailRequest.ToEmail.Replace(";", ",");
-                string[] emailAddress = mailRequest.ToEmail.Split(',');
+                mailRequest.toemail = mailRequest.toemail.Replace(";", ",");
+                string[] emailAddress = mailRequest.toemail.Split(',');
                 if (emailAddress != null
                     && emailAddress.Length > 0)
                 {
@@ -35,10 +35,10 @@ namespace tata_momerial.web.common
                 }
             }
 
-            if (!string.IsNullOrWhiteSpace(mailRequest.CcEmail))
+            if (!string.IsNullOrWhiteSpace(mailRequest.ccemail))
             {
-                mailRequest.CcEmail = mailRequest.CcEmail.Replace(";", ",");
-                string[] emailAddress = mailRequest.CcEmail.Split(',');
+                mailRequest.ccemail = mailRequest.ccemail.Replace(";", ",");
+                string[] emailAddress = mailRequest.ccemail.Split(',');
                 if (emailAddress != null
                     && emailAddress.Length > 0)
                 {
@@ -49,12 +49,12 @@ namespace tata_momerial.web.common
                 }
             }
 
-            email.Subject = mailRequest.Subject;
+            email.Subject = mailRequest.subject;
             var builder = new BodyBuilder();
-            if (mailRequest.Attachments != null)
+            if (mailRequest.attachments != null)
             {
                 byte[] fileBytes;
-                foreach (var file in mailRequest.Attachments)
+                foreach (var file in mailRequest.attachments)
                 {
                     if (file.Length > 0)
                     {
@@ -67,18 +67,18 @@ namespace tata_momerial.web.common
                     }
                 }
             }
-            if (mailRequest.LstByteAttachments != null && mailRequest.LstByteAttachments.Count > 0)
+            if (mailRequest.lstbyteattachments != null && mailRequest.lstbyteattachments.Count > 0)
             {
-                foreach (var attachment in mailRequest.LstByteAttachments)
+                foreach (var attachment in mailRequest.lstbyteattachments)
                 {
                     builder.Attachments.Add(attachment.FileName, attachment.ByteAttachment);
                 }
             }
-            builder.HtmlBody = mailRequest.Body;
+            builder.HtmlBody = mailRequest.body;
             email.Body = builder.ToMessageBody();
             using var smtp = new SmtpClient();
-            smtp.Connect(_mailSettings.Host, _mailSettings.Port, SecureSocketOptions.StartTls);
-            smtp.Authenticate(_mailSettings.Mail, _mailSettings.Password);
+            smtp.Connect(_mailSettings.host, _mailSettings.port, SecureSocketOptions.StartTls);
+            smtp.Authenticate(_mailSettings.mail, _mailSettings.password);
             await smtp.SendAsync(email);
             smtp.Disconnect(true);
         }
@@ -87,18 +87,18 @@ namespace tata_momerial.web.common
 
     public class MailRequest
     {
-        public string ToEmail { get; set; } = string.Empty;
-        public string CcEmail { get; set; } = string.Empty;
-        public string Subject { get; set; } = string.Empty;
-        public string Body { get; set; } = string.Empty;
-        public List<MailAttachments>? LstByteAttachments { get; set; }
-        public List<IFormFile>? Attachments { get; set; }
+        public string toemail { get; set; } = string.Empty;
+        public string ccemail { get; set; } = string.Empty;
+        public string subject { get; set; } = string.Empty;
+        public string body { get; set; } = string.Empty;
+        public List<MailAttachments>? lstbyteattachments { get; set; }
+        public List<IFormFile>? attachments { get; set; }
 
 
     }
     public class MailAttachments
     {
         public string FileName { get; set; } = string.Empty;
-        public byte[]? ByteAttachment { get; set; }
+        public byte[] ByteAttachment { get; set; } = Array.Empty<byte>();
     }
 }

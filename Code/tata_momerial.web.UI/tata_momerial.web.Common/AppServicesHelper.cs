@@ -52,7 +52,7 @@ namespace tata_momerial.web.common
 
                     string[] Segments = objUriCurrentRequest.AbsoluteUri.ToString().Split('/');
 
-                    string webApplicationName = ApplicationConfiguration.WebAppName;
+                    string webApplicationName = ApplicationConfiguration.webappname;
 
                     if (!string.IsNullOrWhiteSpace(webApplicationName))
                         url = Segments[0] + "//" + Segments[2] + "/" + webApplicationName;
@@ -71,8 +71,8 @@ namespace tata_momerial.web.common
         {
             get
             {
-                IMemoryCache objMemoryCache = ServiceProvider.GetService(typeof(IMemoryCache)) as IMemoryCache;
-                return objMemoryCache;
+                IMemoryCache _memorycache = ServiceProvider.GetService(typeof(IMemoryCache)) as IMemoryCache;
+                return _memorycache;
             }
         }
 
@@ -83,8 +83,8 @@ namespace tata_momerial.web.common
         {
             get
             {
-                IDataProtector objDataProtector = ServiceProvider.GetDataProtector("MVCCore.Web");
-                return objDataProtector;
+                IDataProtector _dataprotector = ServiceProvider.GetDataProtector("MVCCore.Web");
+                return _dataprotector;
             }
         }
 
@@ -197,8 +197,8 @@ namespace tata_momerial.web.common
             get
             {
                 //This works to get file changes.
-                var objOptionsMonitor = ServiceProvider.GetService(typeof(IOptionsMonitor<ApplicationConfiguration>)) as IOptionsMonitor<ApplicationConfiguration>;
-                ApplicationConfiguration objApplicationConfiguration = objOptionsMonitor.CurrentValue;
+                var _optionsmonitor = ServiceProvider.GetService(typeof(IOptionsMonitor<ApplicationConfiguration>)) as IOptionsMonitor<ApplicationConfiguration>;
+                ApplicationConfiguration objApplicationConfiguration = _optionsmonitor.CurrentValue;
                 return objApplicationConfiguration;
             }
         }

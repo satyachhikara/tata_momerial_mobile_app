@@ -22,7 +22,7 @@ namespace tata_momerial.web.DAL
         /// </summary>
         public DBManager()
         {
-            this.ConnectionString = Config.ConnectionString;
+            this.ConnectionString = Config.connectionstring;
         }
         /// <summary>
         /// Constructor
